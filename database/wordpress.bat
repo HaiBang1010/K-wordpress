@@ -1,1 +1,1 @@
-mysqldump -uroot -p wordpress > wordpress.sql
+mysqldump -uroot -p k-wordpress > k-wordpress.sql
