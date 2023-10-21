@@ -13,19 +13,19 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php if ( ! is_front_page() ) : ?>
-		<header class="entry-header alignwide">
-			<?php get_template_part( 'template-parts/header/entry-header' ); ?>
-			<?php twenty_twenty_one_post_thumbnail(); ?>
-		</header><!-- .entry-header -->
-	<?php elseif ( has_post_thumbnail() ) : ?>
-		<header class="entry-header alignwide">
-			<?php twenty_twenty_one_post_thumbnail(); ?>
-		</header><!-- .entry-header -->
-	<?php endif; ?>
+    <?php if ( ! is_front_page() ) : ?>
+    <header class="entry-header alignwide">
+        <?php get_template_part( 'template-parts/header/entry-header' ); ?>
+        <?php twenty_twenty_one_post_thumbnail(); ?>
+    </header><!-- .entry-header -->
+    <?php elseif ( has_post_thumbnail() ) : ?>
+    <header class="entry-header alignwide">
+        <?php twenty_twenty_one_post_thumbnail(); ?>
+    </header><!-- .entry-header -->
+    <?php endif; ?>
 
-	<div class="entry-content">
-		<?php
+    <div class="entry-content">
+        <?php
 		the_content();
 
 		wp_link_pages(
@@ -37,11 +37,11 @@
 			)
 		);
 		?>
-	</div><!-- .entry-content -->
+    </div><!-- .entry-content -->
 
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer default-max-width">
-			<?php
+    <?php if ( get_edit_post_link() ) : ?>
+    <footer class="entry-footer default-max-width">
+        <?php
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Post title. Only visible to screen readers. */
@@ -52,6 +52,6 @@
 				'</span>'
 			);
 			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
+    </footer><!-- .entry-footer -->
+    <?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

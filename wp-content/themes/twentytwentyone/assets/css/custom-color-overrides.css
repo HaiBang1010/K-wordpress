@@ -4,11 +4,53 @@
  * This file is automatically populated if the user chooses custom colors in the Customizer.
  */
 /* Footer */
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 section {
     padding: 60px 0;
 }
-
+/* module 2 */
+.container-content-excerpt {
+    padding: 30px;
+    display: flex !important;
+    width: 600px;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 27px -5px rgba(61, 47, 47, 0.75);
+    -webkit-box-shadow: 0px 0px 27px -5px rgba(61, 47, 47, 0.75);
+    -moz-box-shadow: 0px 0px 27px -5px rgba(61, 47, 47, 0.75);
+}
+.topnewtime {
+    text-align: center;
+    margin-top: 40px;
+}
+.topnewsmonth {
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+.topnewsdate {
+    font-family: "Prata", serif;
+    font-size: 4em;
+    line-height: 1em;
+}
+.content-excerpt-date {
+    margin-left: 30px;
+    border-right: #666 1px solid;
+    height: 100%;
+    width: 33%;
+}
+.content-excerpt-core {
+    width: 67%;
+    padding-left: 26px;
+}
+.content-excerpt-title a {
+    line-height: 80% !important;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: bold;
+    color: #428bca !important;
+}
+/* //module 2 */
 section .section-title {
     text-align: center;
     color: #007b5e;
@@ -18,12 +60,12 @@ section .section-title {
 #footer {
     background: #007b5e !important;
 }
-#footer h5{
-	padding-left: 10px;
+#footer h5 {
+    padding-left: 10px;
     border-left: 3px solid #eeeeee;
     padding-bottom: 6px;
     margin-bottom: 20px;
-    color:#ffffff;
+    color: #ffffff;
 }
 #footer a {
     color: #ffffff;
@@ -31,50 +73,50 @@ section .section-title {
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
 }
-#footer ul.social li{
-	padding: 3px 0;
+#footer ul.social li {
+    padding: 3px 0;
 }
 #footer ul.social li a i {
     margin-right: 5px;
-	font-size:25px;
-	-webkit-transition: .5s all ease;
-	-moz-transition: .5s all ease;
-	transition: .5s all ease;
+    font-size: 25px;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    transition: 0.5s all ease;
 }
 #footer ul.social li:hover a i {
-	font-size:30px;
-	margin-top:-10px;
+    font-size: 30px;
+    margin-top: -10px;
 }
 #footer ul.social li a,
-#footer ul.quick-links li a{
-	color:#ffffff;
+#footer ul.quick-links li a {
+    color: #ffffff;
 }
-#footer ul.social li a:hover{
-	color:#eeeeee;
+#footer ul.social li a:hover {
+    color: #eeeeee;
 }
-#footer ul.quick-links li{
-	padding: 3px 0;
-	-webkit-transition: .5s all ease;
-	-moz-transition: .5s all ease;
-	transition: .5s all ease;
+#footer ul.quick-links li {
+    padding: 3px 0;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    transition: 0.5s all ease;
 }
-#footer ul.quick-links li:hover{
-	padding: 3px 0;
-	margin-left:5px;
-	font-weight:700;
+#footer ul.quick-links li:hover {
+    padding: 3px 0;
+    margin-left: 5px;
+    font-weight: 700;
 }
-#footer ul.quick-links li a i{
-	margin-right: 5px;
+#footer ul.quick-links li a i {
+    margin-right: 5px;
 }
 #footer ul.quick-links li:hover a i {
     font-weight: 700;
 }
 
-@media (max-width:767px){
-	#footer h5 {
-    padding-left: 0;
-    border-left: transparent;
-    padding-bottom: 0px;
-    margin-bottom: 10px;
-}
+@media (max-width: 767px) {
+    #footer h5 {
+        padding-left: 0;
+        border-left: transparent;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
+    }
 }
