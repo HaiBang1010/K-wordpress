@@ -13,14 +13,15 @@ get_header();
 while ( have_posts() ) {
 	the_post();
 	?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<header class="entry-header alignwide">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		</header><!-- .entry-header -->
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <header class="entry-header alignwide">
+        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+       
+    </header><!-- .entry-header -->
 
-		<div class="entry-content">
-			<figure class="wp-block-image">
-				<?php
+    <div class="entry-content">
+        <figure class="wp-block-image">
+            <?php
 				/**
 				 * Filter the default image attachment size.
 				 *
@@ -32,12 +33,12 @@ while ( have_posts() ) {
 				echo wp_get_attachment_image( get_the_ID(), $image_size );
 				?>
 
-				<?php if ( wp_get_attachment_caption() ) : ?>
-					<figcaption class="wp-caption-text"><?php echo wp_kses_post( wp_get_attachment_caption() ); ?></figcaption>
-				<?php endif; ?>
-			</figure><!-- .wp-block-image -->
+            <?php if ( wp_get_attachment_caption() ) : ?>
+            <figcaption class="wp-caption-text"><?php echo wp_kses_post( wp_get_attachment_caption() ); ?></figcaption>
+            <?php endif; ?>
+        </figure><!-- .wp-block-image -->
 
-			<?php
+        <?php
 			the_content();
 
 			wp_link_pages(
@@ -49,10 +50,10 @@ while ( have_posts() ) {
 				)
 			);
 			?>
-		</div><!-- .entry-content -->
+    </div><!-- .entry-content -->
 
-		<footer class="entry-footer default-max-width">
-			<?php
+    <footer class="entry-footer default-max-width">
+        <?php
 			// Check if there is a parent, then add the published in link.
 			if ( wp_get_post_parent_id( $post ) ) {
 				echo '<span class="posted-on">';
@@ -101,9 +102,9 @@ while ( have_posts() ) {
 				);
 			}
 			?>
-		</footer><!-- .entry-footer -->
-	</article><!-- #post-<?php the_ID(); ?> -->
-	<?php
+    </footer><!-- .entry-footer -->
+</article><!-- #post-<?php the_ID(); ?> -->
+<?php
 	// If comments are open or there is at least one comment, load up the comment template.
 	if ( comments_open() || get_comments_number() ) {
 		comments_template();
