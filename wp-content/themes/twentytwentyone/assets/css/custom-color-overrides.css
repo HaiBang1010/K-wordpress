@@ -142,7 +142,7 @@ section .section-title {
 .comments-area.show-avatars .avatar {
     border-radius: 0!important;
     position: relative!important;
-    top: 10px;
+    top:0!important;
 }
 .comments-area.show-avatars .avatar{
     border-radius: 0!important;
@@ -160,6 +160,14 @@ section .section-title {
     top: 10px;
     left: -6px;
 }
+
+.children{
+    margin: 0 0 !important;
+}
+.comments-area>*{
+    margin-bottom: 0!important;
+}
+
 @media (max-width: 767px) {
     #footer h5 {
         padding-left: 0;
