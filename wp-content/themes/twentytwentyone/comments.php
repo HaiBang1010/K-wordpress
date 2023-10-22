@@ -104,7 +104,7 @@ function custom_comment_output($comment, $args, $depth) {
                 </div>
                 <div class="media-body">
                     <h4 class="media-heading"><?php comment_author(); ?></h4>
-                    <p><?php comment_text(); ?>
+                    <?php comment_text(); ?>
                         <?php
                         comment_reply_link(
                             array(
