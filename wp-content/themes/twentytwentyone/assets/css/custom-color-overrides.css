@@ -183,6 +183,88 @@ section .section-title {
     margin-bottom: 0!important;
 }
 
+/*css post recent module10*/
+.recentpost{
+   margin: 30px 0 30px !important;
+}
+.categories{
+    margin: 0!important;
+}
+.headlines {
+      background: #56bdbf!important;
+      overflow: hidden;
+      padding: 20px 30px;
+      margin-top: 0!important;
+    color:white !important;
+
+  }
+.headlinesdate .headlinesdm, .news > .headlines .headlinesdate, .headlinesdate {
+    float: left;
+    font-family: 'Prata', serif;
+}
+.headlines .headlinesdate {
+    font-size: 0.8em;
+    width: 15%;
+    min-width: 55px;
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: bold;
+}
+.headlinesdate .headlinesdm, .news > .headlines .headlinesdate, .headlinesdate {
+    float: left;
+    font-family: 'Prata', serif;
+}
+.headlinesdate .headlinesyear {
+    line-height: 3.5em;
+    float: left;
+    margin-left: 3px;
+}
+.headlines ul > li > .headlinestitle {
+    display: table-cell;
+    vertical-align: middle;
+    width: 85%;
+}
+.headlines ul > li > .headlinestitle>a{
+     color: white!important;
+}
+
+.headlines ul > li {
+    overflow: hidden;
+    display: table;
+    margin-bottom: 5px;
+    width: 100%;
+}
+.headlines ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.headlinesdate .headlinesday {
+    border-bottom: 1px solid #fff;
+}
+.news > .headlines .headlinesmonth {
+    line-height: 1.7em;
+}
+.headlinesdate .headlinesday, .news > .headlines .headlinesmonth {
+    line-height: 1.7em;
+}
+.newsall {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    background: #62c6c8;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+}
+.recentpost>a:hover{
+    color: white;
+}
+a {
+    color: #428bca;
+    text-decoration: none;
+}
+
 @media (max-width: 767px) {
     #footer h5 {
         padding-left: 0;

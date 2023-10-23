@@ -2590,7 +2590,7 @@ function comment_form( $args = array(), $post = null ) {
                         <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">Make
-                                    a Post</a>
+                                    a Comment</a>
                             </li>
                         </ul>
                     </div>
