@@ -8,6 +8,21 @@
 section {
     padding: 60px 0;
 }
+/* module 4 */
+.form-control-borderless {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.form-control-borderless:hover,
+.form-control-borderless:active,
+.form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+/* //module 4 */
 /* module 2 */
 .container-content-excerpt {
     padding: 30px;
@@ -144,8 +159,8 @@ section .section-title {
     position: relative!important;
     top:0!important;
 }
-.comments-area.show-avatars .avatar{
-    border-radius: 0!important;
+.comments-area.show-avatars .avatar {
+    border-radius: 0 !important;
 }
 .comment-box .media-heading:before {
     content: "";

@@ -1,6 +1,7 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <?php
 /**
  * The template for displaying comments
@@ -27,26 +28,27 @@ if ( post_password_required() ) {
 $twenty_twenty_one_comment_count = get_comments_number();
 ?>
 
-<div id="comments" class="comments-area default-max-width <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
+<div id="comments"
+    class="comments-area default-max-width <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
 
     <?php
     if ( have_comments() ) :
         ?>
-        <h2 class="comments-title">
-            <?php if ( '1' === $twenty_twenty_one_comment_count ) : ?>
-                <?php esc_html_e( '1 comment', 'twentytwentyone' ); ?>
-            <?php else : ?>
-                <?php
+    <h2 class="comments-title">
+        <?php if ( '1' === $twenty_twenty_one_comment_count ) : ?>
+        <?php esc_html_e( '1 comment', 'twentytwentyone' ); ?>
+        <?php else : ?>
+        <?php
                 printf(
                 /* translators: %s: Comment count number. */
                     esc_html( _nx( '%s comment', '%s comments', $twenty_twenty_one_comment_count, 'Comments title', 'twentytwentyone' ) ),
                     esc_html( number_format_i18n( $twenty_twenty_one_comment_count ) )
                 );
                 ?>
-            <?php endif; ?>
-        </h2><!-- .comments-title -->
+        <?php endif; ?>
+    </h2><!-- .comments-title -->
 
-        <?php
+    <?php
         wp_list_comments(
             array(
                 'avatar_size' => 60,
@@ -57,7 +59,7 @@ $twenty_twenty_one_comment_count = get_comments_number();
         );
         ?>
 
-        <?php
+    <?php
         the_comments_pagination(
             array(
                 'before_page_number' => esc_html__( 'Page', 'twentytwentyone' ) . ' ',
@@ -94,18 +96,18 @@ $twenty_twenty_one_comment_count = get_comments_number();
 function custom_comment_output($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment;
     ?>
-    <div class="container">
-        <div class="row">
-            <div class="media comment-box">
-                <div class="media-left">
-                    <a href="#">
-                        <?php echo get_avatar($comment, 60); ?>
-                    </a>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading"><?php comment_author(); ?></h4>
-                    <?php comment_text(); ?>
-                        <?php
+<div class="container">
+    <div class="row">
+        <div class="media comment-box">
+            <div class="media-left">
+                <a href="#">
+                    <?php echo get_avatar($comment, 60); ?>
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading"><?php comment_author(); ?></h4>
+                <?php comment_text(); ?>
+                <?php
                         comment_reply_link(
                             array(
                                 'depth'     => $depth,
@@ -113,11 +115,10 @@ function custom_comment_output($comment, $args, $depth) {
                             )
                         );
                         ?>
-                </div>
             </div>
         </div>
     </div>
-    <?php
+</div>
+<?php
 }
 ?>
-
