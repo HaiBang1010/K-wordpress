@@ -277,3 +277,42 @@ a {
         margin-bottom: 10px;
     }
 }
+/* Khoi-module-6 */
+#date-title-module-6{
+    background: #f5ce31;
+    border-radius: 50%;
+    padding: 10px 20px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+.row .overviewline{
+    border-bottom: 1px solid #cecece;
+    margin: 25px 0 15px;
+    position: relative;
+}
+
+.row .overviewline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border-width: 12px 12px 0;
+    border-style: solid;
+    border-color: #cecece transparent;
+    display: block;
+    width: 0;
+}
+
+.row .overviewline:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 51px;
+    border-width: 11px 11px 0;
+    border-style: solid;
+    border-color: #f5f5f5 transparent;
+    display: block;
+    width: 0;
+}

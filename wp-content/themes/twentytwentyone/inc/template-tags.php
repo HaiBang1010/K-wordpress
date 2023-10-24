@@ -56,7 +56,7 @@ if (!function_exists('twenty_twenty_one_posted_by')) {
 			echo '<span class="byline">';
 			printf(
 				/* translators: %s: Author name. */
-				esc_html__('By %s', 'twentytwentyone'),
+				esc_html__('(Theo %s)', 'twentytwentyone'),
 				'<a href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '" rel="author">' . esc_html(get_the_author()) . '</a>'
 			);
 			echo '</span>';
@@ -134,7 +134,7 @@ if (!function_exists('twenty_twenty_one_entry_meta_footer')) {
 
 			echo '<div class="posted-by">';
 			// Posted on.
-			twenty_twenty_one_posted_on();
+			//twenty_twenty_one_posted_on();
 			// Posted by.
 			twenty_twenty_one_posted_by();
 			// Edit post link.
