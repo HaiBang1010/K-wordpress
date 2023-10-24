@@ -4,6 +4,9 @@
  * This file is automatically populated if the user chooses custom colors in the Customizer.
  */
 /* Footer */
+body{
+    background: white!important;
+}
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 section {
     padding: 60px 0;
@@ -126,12 +129,10 @@ section .section-title {
 #footer ul.quick-links li:hover a i {
     font-weight: 700;
 }
-/* CSS Test begin */
+/*module-14*/
 .comment-box {
     margin-top: 30px !important;
 }
-/* CSS Test end */
-
 .comment-box img {
     width: 50px;
     height: 50px;
@@ -182,6 +183,8 @@ section .section-title {
 .comments-area>*{
     margin-bottom: 0!important;
 }
+/*module14*/
+
 
 /*css post recent module10*/
 .recentpost{
@@ -264,6 +267,7 @@ a {
     color: #428bca;
     text-decoration: none;
 }
+/*css post recent module10*/
 
 @media (max-width: 767px) {
     #footer h5 {
