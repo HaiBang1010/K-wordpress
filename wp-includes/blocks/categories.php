@@ -51,7 +51,7 @@ function render_block_core_categories( $attributes ) {
 		$type           = 'list';
 	}
 
-	$wrapper_attributes = get_block_wrapper_attributes( array( 'class' => "wp-block-categories-{$type}" ) );
+	$wrapper_attributes = get_block_wrapper_attributes( array( 'class' => " mt-0 wp-block-categories-{$type}" ) );
 
 	return sprintf(
 		$wrapper_markup,

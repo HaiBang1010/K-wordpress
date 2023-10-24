@@ -197,7 +197,7 @@ class Walker_Category extends Walker {
 		if ( 'list' === $args['style'] ) {
 			$output     .= "\t<li";
 			$css_classes = array(
-				'cat-item',
+				'cat-item list-group-item khoi-module-9',
 				'cat-item-' . $category->term_id,
 			);
 
@@ -216,7 +216,7 @@ class Walker_Category extends Walker {
 						$css_classes[] = 'current-cat';
 						$link          = str_replace( '<a', '<a aria-current="page"', $link );
 					} elseif ( $category->term_id === $_current_term->parent ) {
-						$css_classes[] = 'current-cat-parent';
+						$css_classes[] = 'current-cat-parent'; 
 					}
 
 					while ( $_current_term->parent ) {
