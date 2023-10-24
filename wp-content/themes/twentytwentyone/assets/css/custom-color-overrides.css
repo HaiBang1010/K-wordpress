@@ -201,6 +201,7 @@ section .section-title {
     color:white !important;
 
   }
+  
 .headlinesdate .headlinesdm, .news > .headlines .headlinesdate, .headlinesdate {
     float: left;
     font-family: 'Prata', serif;
@@ -228,7 +229,7 @@ section .section-title {
     width: 85%;
 }
 .headlines ul > li > .headlinestitle>a{
-     color: white!important;
+     color: white;
 }
 
 .headlines ul > li {
