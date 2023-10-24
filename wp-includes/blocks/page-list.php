@@ -203,7 +203,7 @@ function block_core_page_list_render_nested_page_list($open_submenus_on_click, $
 			$markup .= '<button aria-label="' . esc_attr($aria_label) . '" class="' . esc_attr($navigation_child_content_class) . ' wp-block-navigation-submenu__toggle" aria-expanded="false">' . esc_html($title) .
 				'</button><span class="wp-block-page-list__submenu-icon wp-block-navigation__submenu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></span>';
 		} else {
-			$markup .= '<div class="">
+			$markup .= '
 			<div class="vc_column-inner">
 				<div class="wpb_wrapper">
 					<div class="wpb_text_column wpb_content_element bottom-h4">
@@ -215,8 +215,7 @@ function block_core_page_list_render_nested_page_list($open_submenus_on_click, $
 						</div>
 						</div>
 					</div>
-				</div>
-			</div>';
+				</div>		';
 		}
 
 		if (isset($page['children'])) {

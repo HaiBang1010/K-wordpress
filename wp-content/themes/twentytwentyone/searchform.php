@@ -20,7 +20,7 @@
 $twentytwentyone_unique_id = wp_unique_id('search-form-');
 
 $twentytwentyone_aria_label = !empty($args['aria_label']) ? 'aria-label="' . esc_attr($args['aria_label']) . '"' : '';
-?><div class=" justify-content-center pt-3 pb-5" style="width: 100vw; background-color: #f5efe0;">
+?><div class=" justify-content-center py-4" style="width: 100%; background-color: #f5efe0;">
 	<div class="w-100 search-form" style="display: block;">
 		<form class="card " <?php echo $twentytwentyone_aria_label; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped above. 
 							?> method="get" class="search-form" action="<?php echo esc_url(home_url('/')); ?>">
