@@ -92,7 +92,7 @@ $twenty_twenty_one_comment_count = get_comments_number();
 </div><!-- #comments -->
 
 <?php
-// Hàm tùy chỉnh để hiển thị từng bình luận theo giao diện bạn cung cấp.
+// Hàm tùy chỉnh để hiển thị từng bình luận.
 function custom_comment_output($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment;
     ?>
