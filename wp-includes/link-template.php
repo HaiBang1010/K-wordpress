@@ -2784,26 +2784,119 @@ function get_the_post_navigation( $args = array() ) {
 
 	$navigation = '';
 
-	$previous = get_previous_post_link(
-		'<div class="nav-previous">%link</div>',
-		$args['prev_text'],
-		$args['in_same_term'],
-		$args['excluded_terms'],
-		$args['taxonomy']
-	);
+	// $previous = get_previous_post_link(
+	// 	'<div class="nav-previous">%link</div>',
+	// 	$args['prev_text'],
+	// 	$args['in_same_term'],
+	// 	$args['excluded_terms'],
+	// 	$args['taxonomy']
+	// );
 
-	$next = get_next_post_link(
-		'<div class="nav-next">%link</div>',
-		$args['next_text'],
-		$args['in_same_term'],
-		$args['excluded_terms'],
-		$args['taxonomy']
-	);
-
+	// $next = get_next_post_link(
+	// 	'<div class="nav-next">%link</div>',
+	// 	$args['next_text'],
+	// 	$args['in_same_term'],
+	// 	$args['excluded_terms'],
+	// 	$args['taxonomy']
+	// );
+	
 	// Only add markup if there's somewhere to navigate to.
-	if ( $previous || $next ) {
-		$navigation = _navigation_markup( $previous . $next, $args['class'], $args['screen_reader_text'], $args['aria_label'] );
-	}
+	// if ( $previous || $next ) {
+	// 	// $navigation = _navigation_markup( $previous . $next, $args['class'], $args['screen_reader_text'], $args['aria_label'] );
+	// 	$output = '<div class="col-md-3">';
+	// 	$output .= '<div class="recentpost">';
+	// 	$output .= '<div class="headlines" style="background-color: white;">';
+	// 	$output .= '<ul>';
+	
+	// 	// Hiển thị bài viết "prev" nếu tồn tại
+	// 	if ($previous) {
+	// 		$output .= '<li>';
+	// 		$output .= '<div class="headlinesdate">';
+	// 		$output .= '<div class="headlinesdm">';
+	// 		$output .= '<div class="headlinesday">' . get_the_time('d', $previous->ID) . '</div>';
+	// 		$output .= '<div class="headlinesmonth">' . get_the_time('m', $previous->ID) . '</div>';
+	// 		$output .= '</div>';
+	// 		$output .= '<div class="headlinesyear">' . get_the_time('Y', $previous->ID) . '</div>';
+	// 		$output .= '</div>';
+	// 		$output .= '<div class="headlinestitle">';
+	// 		$output .= '<a href="' . get_permalink($previous->ID) . '">' . get_the_title($previous->ID) . '</a>';
+	// 		$output .= '</div>';
+	// 		$output .= '</li>';
+	// 	}
+	
+	// 	// Hiển thị bài viết "next" nếu tồn tại
+	// 	if ($next) {
+	// 		$output .= '<li>';
+	// 		$output .= '<div class="headlinesdate">';
+	// 		$output .= '<div class="headlinesdm">';
+	// 		$output .= '<div class="headlinesday">' . get_the_time('d', $next->ID) . '</div>';
+	// 		$output .= '<div class="headlinesmonth">' . get_the_time('m', $next->ID) . '</div>';
+	// 		$output .= '</div>';
+	// 		$output .= '<div class="headlinesyear">' . get_the_time('Y', $next->ID) . '</div>';
+	// 		$output .= '</div>';
+	// 		$output .= '<div class="headlinestitle">';
+	// 		$output .= '<a href="' . get_permalink($next->ID) . '">' . get_the_title($next->ID) . '</a>';
+	// 		$output .= '</div>';
+	// 		$output .= '</li>';
+	// 	}
+	
+	// 	$output .= '</ul>';
+	// 	$output .= '</div>';
+	// 	$output .= '</div>';
+	// 	$output .= '</div>';
+	
+	// 	// In ra chuỗi hoàn chỉnh
+	// 	$navigation = $output;
+	// }
+
+	$previous_post = get_previous_post();
+$next_post = get_next_post();
+
+if ($previous_post || $next_post) {
+	$output = '<div class="row"><div class="col-md-3"></div>';
+    $output .= '<div class="col-md-6">';
+    $output .= '<div class="recentpost">';
+    $output .= '<div class="headlines text-dark" style="background-color: white !important;">';
+    $output .= '<ul>';
+
+    if ($previous_post) {
+        $output .= '<li>';
+        $output .= '<div class="headlinesdate">';
+        $output .= '<div class="headlinesdm">';
+        $output .= '<div class="headlinesday border-bottom">' . get_the_time('d', $previous_post) . '</div>';
+        $output .= '<div class="headlinesmonth">' . get_the_time('m', $previous_post) . '</div>';
+        $output .= '</div>';
+        $output .= '<div class="headlinesyear">' . get_the_time('Y', $previous_post) . '</div>';
+        $output .= '</div>';
+        $output .= '<div class="headlinestitle text-dark">';
+        $output .= '<a class="text-dark" href="' . get_permalink($previous_post) . '">' . get_the_title($previous_post) . '</a>';
+        $output .= '</div>';
+        $output .= '</li>';
+    }
+
+    if ($next_post) {
+        $output .= '<li>';
+        $output .= '<div class="headlinesdate">';
+        $output .= '<div class="headlinesdm">';
+        $output .= '<div class="headlinesday border-bottom">' . get_the_time('d', $next_post) . '</div>';
+        $output .= '<div class="headlinesmonth">' . get_the_time('m', $next_post) . '</div>';
+        $output .= '</div>';
+        $output .= '<div class="headlinesyear">' . get_the_time('Y', $next_post) . '</div>';
+        $output .= '</div>';
+        $output .= '<div class="headlinestitle">';
+        $output .= '<a class="text-dark" href="' . get_permalink($next_post) . '">' . get_the_title($next_post) . '</a>';
+        $output .= '</div>';
+        $output .= '</li>';
+    }
+
+    $output .= '</ul>';
+    $output .= '</div>';
+    $output .= '</div>';
+    $output .= '</div>';
+    $output .= '<div class="col-md-3"></div>';
+    $output .= '</div>';
+    $navigation = $output;
+}
 
 	return $navigation;
 }
@@ -2870,7 +2963,7 @@ function get_the_posts_navigation( $args = array() ) {
 		$prev_link = get_next_posts_link( $args['prev_text'] );
 
 		if ( $prev_link ) {
-			$navigation .= '<div class="nav-previous">' . $prev_link . '</div>';
+			$navigation .= '<div class="nav-previous">' . $prev_link .'</div>';
 		}
 
 		if ( $next_link ) {
