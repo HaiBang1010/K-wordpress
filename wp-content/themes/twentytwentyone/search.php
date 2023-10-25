@@ -14,6 +14,7 @@ get_header();
 ?>
 <div class="row">
     <div class="col-md-3 pl-4">
+        <div class="text-primary mb-4" style="font-size: 26px;">Trang mới nhất</div>
         <?php
         function has_pages()
         {
@@ -39,21 +40,21 @@ get_header();
             // Kiểm tra xem có comment nào không
             if ($all_pages) {
         ?>
-        <?php
+                <?php
                 foreach ($all_pages as $page) {
                 ?>
-        <div class="mb-3">
-            <a href="<?php echo get_page_link($page->ID); ?>"><?php echo $page->post_title; ?></a>
+                    <div class="mb-3">
+                        <a href="<?php echo get_page_link($page->ID); ?>"><?php echo $page->post_title; ?></a>
 
-            <hr style="width: 100px; margin:10px 0 10px 0 ">
+                        <hr style="width: 100px; margin:10px 0 10px 0 ">
 
-            <p>
-                <?php
+                        <p>
+                            <?php
                             $page_content = get_the_content(null, false, $page->ID); // Lấy nội dung của trang
                             echo apply_filters('the_content', $page_content); // Hiển thị nội dung đã được lọc
                             ?>
-            </p>
-        </div>
+                        </p>
+                    </div>
 
 
         <?php
@@ -75,20 +76,20 @@ get_header();
         <?php
         if (have_posts()) {
         ?>
-        <header class="page-header alignwide">
-            <h1 class="page-title">
-                <?php
+            <header class="page-header alignwide">
+                <h1 class="page-title">
+                    <?php
                     printf(
                         /* translators: %s: Search term. */
                         esc_html__('Results for "%s"', 'twentytwentyone'),
                         '<span class="page-description search-term">' . esc_html(get_search_query()) . '</span>'
                     );
                     ?>
-            </h1>
-        </header><!-- .page-header -->
+                </h1>
+            </header><!-- .page-header -->
 
-        <div class="search-result-count default-max-width">
-            <?php
+            <div class="search-result-count default-max-width">
+                <?php
                 printf(
                     esc_html(
                         /* translators: %d: The number of search results. */
@@ -102,7 +103,7 @@ get_header();
                     (int) $wp_query->found_posts
                 );
                 ?>
-        </div><!-- .search-result-count -->
+            </div><!-- .search-result-count -->
         <?php
             // Start the Loop.
             while (have_posts()) {
@@ -138,8 +139,8 @@ get_header();
                 // Kiểm tra xem có comment nào không
                 if ($comments) {
         ?>
-        <h5>Comments</h5>
-        <?php
+                    <h5>Comments</h5>
+            <?php
                     // Hiển thị danh sách comment bằng giao diện đã tạo
                     echo '<ul class="comment-list">';
                     wp_list_comments(array(
@@ -153,9 +154,8 @@ get_header();
             }
         } else {
             ?>
-        <div
-            style="font-weight: bold; display: flex; justify-content: center; align-items: center;height: 120vh; color: white">
-            No comment</div>
+            <div style="font-weight: bold; display: flex; justify-content: center; align-items: center;height: 120vh; color: white">
+                No comment</div>
         <?php
         }
         ?>
@@ -169,22 +169,22 @@ function custom_comment_output($comment, $args, $depth)
 {
     $GLOBALS['comment'] = $comment;
 ?>
-<div class="media comment-box">
-    <div class="media-left">
-        <a href="#">
-            <?php echo get_avatar($comment, 60); ?>
-        </a>
-    </div>
-    <div class="media-body">
-        <h4 class="media-heading"><?php comment_author(); ?></h4>
-        <?php
+    <div class="media comment-box">
+        <div class="media-left">
+            <a href="#">
+                <?php echo get_avatar($comment, 60); ?>
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading"><?php comment_author(); ?></h4>
+            <?php
             // Lấy nội dung comment và giới hạn thành 20 từ
             $comment_text = wp_trim_words(get_comment_text(), 10);
             $comment_permalink = get_comment_link($comment);
             echo '<p style="background: white" class="comment-content"><a href="' . esc_url($comment_permalink) . '">' . $comment_text . '</a></p>';
             ?>
+        </div>
     </div>
-</div>
 <?php
 }
 get_footer();
