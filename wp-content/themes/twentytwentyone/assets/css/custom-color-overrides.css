@@ -131,7 +131,7 @@ section .section-title {
 }
 /*module-14*/
 .comment-box {
-    margin-top: 30px !important;
+    margin-top: 15px !important;
 }
 .comment-box img {
     width: 50px;
@@ -182,6 +182,12 @@ section .section-title {
 }
 .comments-area>*{
     margin-bottom: 0!important;
+}
+ ol {
+    padding-left:65px !important;
+}
+p{
+    margin-bottom:0 !important;
 }
 /*module14*/
 
@@ -364,4 +370,17 @@ a {
 .list-group-item a{
     color: #428bca !important;
     text-decoration: none !important;
+}
+//module
+section {
+    padding: 0 0 !important;
+}
+button{
+background-color:#007bff!important;    
+color:white!important;
+}
+.site textarea {
+    border: 1px solid #ced4da !important;
+    border-radius: 0.25rem !important;
+    margin:0 0 !important;
 }

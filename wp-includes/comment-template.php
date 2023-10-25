@@ -1816,7 +1816,7 @@ function get_comment_reply_link( $args = array(), $comment = null, $post = null 
 		$data_attribute_string = trim( $data_attribute_string );
 
 		$link = sprintf(
-			"<a rel='nofollow' class='comment-reply-link' href='%s' %s aria-label='%s'>%s</a>",
+			"",
 			esc_url(
 				add_query_arg(
 					array(
@@ -2578,14 +2578,12 @@ function comment_form( $args = array(), $post = null ) {
 		'fields'               => $fields,
 		'comment_field'        => sprintf(
 			'<p class="comment-form-comment">%s %s</p>',
-			sprintf(
-				'<label for="comment">%s%s</label>',
-				_x( 'Comment', 'noun' ),
+			sprintf(	
 				$required_indicator
 			),
 
 			' <!--- Post Form Begins -->
-                <section class="card">
+                <div class="card">
                     <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
@@ -2607,7 +2605,7 @@ function comment_form( $args = array(), $post = null ) {
                             <button type="submit" id="submit" name="submit" class="btn btn-primary">share</button>
                         </div>
                     </div>
-                </section>
+                </div>
                 <!--- Post Form Ends -->'
 		),
 		'must_log_in'          => sprintf(
@@ -2694,22 +2692,7 @@ function comment_form( $args = array(), $post = null ) {
 	?>
 	<div id="respond" class="<?php echo esc_attr( $args['class_container'] ); ?>">
 
-
 		<?php
-		echo $args['title_reply_before'];
-
-		comment_form_title( $args['title_reply'], $args['title_reply_to'], true, $post_id );
-
-		if ( get_option( 'thread_comments' ) ) {
-			echo $args['cancel_reply_before'];
-
-			cancel_comment_reply_link( $args['cancel_reply_link'] );
-
-			echo $args['cancel_reply_after'];
-		}
-
-		echo $args['title_reply_after'];
-
 		if ( get_option( 'comment_registration' ) && ! is_user_logged_in() ) :
 
 			echo $args['must_log_in'];
@@ -2751,7 +2734,7 @@ function comment_form( $args = array(), $post = null ) {
 				 * @param string $user_identity  If the commenter is a registered user,
 				 *                               the display name, blank otherwise.
 				 */
-				echo apply_filters( 'comment_form_logged_in', $args['logged_in_as'], $commenter, $user_identity );
+				echo apply_filters( 'comment_form_logged_in', '', $commenter, $user_identity );
 
 				/**
 				 * Fires after the is_user_logged_in() check in the comment form.

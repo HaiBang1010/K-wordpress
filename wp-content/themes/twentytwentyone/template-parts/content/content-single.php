@@ -106,7 +106,7 @@
         ?>
         </ul>
             </div>
-            <a class="newsall" href="http://fit.tdc.edu.vn/tin-tuc">Xem tất cả tin tức</a>
+            <a class="newsall" href="http://localhost/k-wordpress/category/the-thao/">Xem tất cả tin tức</a>
         </div>
     </div>
 </div>

@@ -5267,7 +5267,7 @@ function wp_required_field_indicator()
 {
 	/* translators: Character to identify required form fields. */
 	$glyph     = __('*');
-	$indicator = '<span class="required">' . esc_html($glyph) . '</span>';
+	$indicator = '';
 
 	/**
 	 * Filters the markup for a visual indicator of required form fields.
