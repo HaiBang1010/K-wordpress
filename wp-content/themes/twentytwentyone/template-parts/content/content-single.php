@@ -89,7 +89,7 @@
                         ?>
                                 <li>
                                     <div class="headlinesdate">
-                                        <div class="headlinesdm" ">
+                                        <div class="headlinesdm">
                                     <div class=" headlinesday"><?php the_time('d'); ?></div>
                                         <div class="headlinesmonth"><?php the_time('m'); ?></div>
                                     </div>
